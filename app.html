@@ -72,18 +72,19 @@
             <h5>Enter a pharse or word</h5>
             <form class="row gy-2 gx-3">
               <div class="col">
-                <input id="userString" type="text" class="form-control" placeholder="Enter A String"
+                <input id="userInput" type="text" class="form-control" placeholder="Enter A String"
                   aria-label="Enter A String">
               </div>
-              <div class="col-12 d-flex justify-content-end mt-1">
-                <button id="btnSubmit" type="button" class="btn btn-dark">Check it</button>
+              <div class="col-12 mt-2">
+                <button id="btnSubmit" type="button" class="btn btn-dark btn=sm">Check it</button>
               </div>
             </form>
-            <h2 class="mt-5 border-bottom border-2">Results</h2>
-            <div class="alert alert-success mt-5 invisible fade show" id="alert">
-              <h4 id="alertHeader" class="alert-heading">Well done!</h4>
+            <div class="alert alert-success mt-5 invisible fade show" id="alert" role="alert">
+              <h4>Your string is: </h4>
               <hr>
-              <p class="mb-0" id="msg"></p>
+              <p id="result" class="result">
+                <!-- Result Gose Here -->
+              </p>
             </div>
           </div>
         </div>
