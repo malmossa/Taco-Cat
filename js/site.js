@@ -1,45 +1,58 @@
-const  startValue = document.getElementById("startValue");
-const endValue = document.getElementById("endValue");
-const btn = document.getElementById("btnSubmit");
-const result = document.getElementById("results");
 
-btn.addEventListener("click", displayValues);
+let btn = document.getElementById("btnSubmit");
 
+btn.addEventListener("click", displayMessage);
 
-function getValues()
+// Get user input
+function getValue()
 {
-  let start = startValue.value;
-  let end = endValue.value;
+  document.getElementById("alert").classList.add("invisible");
+  // get user string for the page
+  let userString = document.getElementById("userString").value;
 
-  // Convert to integers
-  start = parseInt(start);
-  end = parseInt(end);
+  // check for a palindrom
+  let returnObj = checkForPalindrome(userString);
 
-  let valuesRange = [];
+  // display out message to the screen
+  displayMessage(returnObj);
 
-  for (let i = start; i <= end; i++)
-  {
-    valuesRange.push(i);
-  }
-
-  return valuesRange;
 }
 
-
-function displayValues()
+// check if string is a palindrome
+function checkForPalindrome(userString)
 {
-  let numbers = getValues();
+  // taco cat
+  userString = userString.toLowerCase();
 
-  let className = "";
+  // remove spaces and special characters
+  let regex = /[^a-z0-9]/gi;
+  userString = userString.replace(regex, "");
 
-  for (let i = 0; i < numbers.length; i++)
+  let revString = [];
+  let returnObj = {};
+
+  for (let i = userString.length -1; i >= 0; i--)
   {
-    if (numbers[i] % 2 == 0)
-    {
-      className = "even";
-    } else {
-      className = "odd";
-    }
-    result.innerHTML += `<tr><td class="${className}">${numbers[i]}</td></tr>`;
+    revString += userString[i];
   }
+
+  if (revString == userString)
+  {
+    returnObj.msg = "Well done! You enterd a palindrome!"
+  } else
+  {
+    returnObj.msg = "Sorry! You did not enterd a pallindrome!"
+  }
+
+  returnObj.reversed = revString;
+
+  return returnObj;
+}
+
+// display a message to the string
+function displayMessage()
+{
+  document.getElementById("alertHeader").innerHTML = returnObj.msg;
+  document.getElementById("msg").innerHTML = `Your phrase reversed is: ${returnObj.reversed}`;
+  document.getElementById("alert").classList.remove("invisible");
 }

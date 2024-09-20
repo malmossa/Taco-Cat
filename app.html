@@ -7,7 +7,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Zero To Hundred</title>
+  <title>Taco Cat</title>
 
   <!-- Bootstrap CSS & Fontawesome -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -47,7 +47,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Zero-To-Hundred"> Git Repo </a>
+            <a class="nav-link" target="_blank" href="https://github.com/malmossa/Taco-Cat"> Git Repo </a>
           </li>
         </ul>
       </div>
@@ -59,38 +59,31 @@
     <div class="container mt-5">
       <div class="row row-cols-1 row-cols-lg-2">
         <div class="col col-lg-4 border-right border-2">
-          <h1>Zero To Hundred: A Coding Project</h1>
+          <h1>Taco Cat: A Coding Project</h1>
           <h4 class="lead">
-            Live life one loop at a time. A JavaScript exercise using loops.
-            Write a program the displays the numbers from 0 to 100. Display
-            the even numbers in <strong>BOLD</strong>
+            Taco Cat is a palindrome. A Palindrome is a word, phrase, or sequence that reads the same backward as
+            forward. This is a program the chechs if the phrase entered is a palindrome.
           </h4>
           <h2 class="mt-2 border-bottom border-2">Instructions</h2>
-          <p>Enter a starting value and a ending value. Press the button and the values will appear.</p>
+          <p>Enter a phrase or word to check if it is a palindrome. Press the button to see the result.</p>
         </div>
         <div class="col col-lg-8">
           <div>
-            <h5>Enter Values</h5>
+            <h5>Enter a pharse or word</h5>
             <form class="row gy-2 gx-3">
               <div class="col">
-                <input id="startValue" type="number" class="form-control" placeholder="Start Value" value=0
-                  aria-label="Start Value">
-              </div>
-              <div class="col">
-                <input id="endValue" type="number" class="form-control" placeholder="End Value" value=100
-                  aria-label="End Value">
+                <input id="userString" type="text" class="form-control" placeholder="Enter A String"
+                  aria-label="Enter A String">
               </div>
               <div class="col-12 d-flex justify-content-end mt-1">
-                <button id="btnSubmit" type="button" class="btn btn-dark btn-lg">Display the Values</button>
+                <button id="btnSubmit" type="button" class="btn btn-dark">Check it</button>
               </div>
             </form>
             <h2 class="mt-5 border-bottom border-2">Results</h2>
-            <div class="table-responsive">
-              <table class="table table-striped table-sm">
-                <tbody id="results">
-                  <!-- Results Go here -->
-                </tbody>
-              </table>
+            <div class="alert alert-success mt-5 invisible fade show" id="alert">
+              <h4 id="alertHeader" class="alert-heading">Well done!</h4>
+              <hr>
+              <p class="mb-0" id="msg"></p>
             </div>
           </div>
         </div>
