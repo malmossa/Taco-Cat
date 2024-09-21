@@ -77,3 +77,11 @@ pre[class*="language-"] {
 main > .container {
   padding: 60px 15px 0;
 }
+
+.result > .palindrome {
+  color: green;
+}
+
+.result > .not_palindrome {
+  color: red;
+}
