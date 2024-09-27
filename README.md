@@ -1,2 +1,2 @@
-# JsSiteTemplate
-This a Starter JS Template for All JavaScript projects 
+# JavaScript Project
+Try it out: https://malmossa.github.io/Taco-Cat/
